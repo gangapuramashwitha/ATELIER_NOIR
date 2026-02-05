@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - ATELIER NOIR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">ATELIER NOIR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="items.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link active">
+                    <span>Cart</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Shopping Cart</h1>
+            <p class="page-subtitle">Review your selected design services</p>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items-wrapper">
+                    <div id="cartItems" class="cart-items">
+                        <!-- Cart items will be dynamically inserted here -->
+                    </div>
+                    <div id="emptyCart" class="empty-cart" style="display: none;">
+                        <div class="empty-cart-icon">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2"/>
+                                <path d="M30 60L40 70L70 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Your cart is empty</h3>
+                        <p>Explore our portfolio to find the perfect design package for your project.</p>
+                        <a href="items.html" class="secondary-button">Browse Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3 class="summary-title">Order Summary</h3>
+                    
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Consultation Fee</span>
+                            <span id="consultationFee">$500.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (8%)</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="promo-code">
+                        <input type="text" id="promoInput" placeholder="Enter promo code">
+                        <button class="apply-promo-btn" onclick="applyPromo()">Apply</button>
+                    </div>
+                    <div id="promoMessage" class="promo-message"></div>
+
+                    <button class="checkout-btn" onclick="proceedToCheckout()">
+                        Proceed to Checkout
+                    </button>
+
+                    <div class="payment-methods">
+                        <p class="payment-label">We Accept</p>
+                        <div class="payment-icons">
+                            <div class="payment-icon">VISA</div>
+                            <div class="payment-icon">MC</div>
+                            <div class="payment-icon">AMEX</div>
+                            <div class="payment-icon">PAYPAL</div>
+                        </div>
+                    </div>
+
+                    <div class="security-badge">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2L3 5V9C3 13.55 6.12 17.74 10 19C13.88 17.74 17 13.55 17 9V5L10 2Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 10L9.5 11.5L12.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span>Secure Checkout</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue Shopping -->
+            <div class="continue-shopping">
+                <a href="items.html" class="link-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Continue Shopping
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 20L18 23L25 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Money-Back Guarantee</h4>
+                    <p>30-day satisfaction guarantee on all design packages</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L8 11V19C8 26.18 12.89 32.84 20 35C27.11 32.84 32 26.18 32 19V11L20 5Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Secure Payment</h4>
+                    <p>Your payment information is encrypted and secure</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="8" y="12" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 12V10C12 5.58 15.58 2 20 2C24.42 2 28 5.58 28 10V12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Expert Support</h4>
+                    <p>Dedicated design consultants available to help</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">ATELIER NOIR</h3>
+                    <p class="footer-tagline">Timeless Design. Modern Living.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="items.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>123 Design Avenue</li>
+                        <li>New York, NY 10001</li>
+                        <li>hello@ateliernoir.com</li>
+                        <li>+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atelier Noir. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
