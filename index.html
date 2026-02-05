@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER NOIR - Interior Design Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">ATELIER NOIR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="items.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">
+                    <span>Cart</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Crafting Spaces</span>
+                <span class="title-line">That Inspire</span>
+            </h1>
+            <p class="hero-subtitle">Where timeless elegance meets modern sophistication</p>
+            <a href="items.html" class="cta-button">Explore Our Work</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Our Philosophy</h2>
+            </div>
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <p class="lead-text">At Atelier Noir, we believe that exceptional interior design transcends mere aesthetics. It's an intimate dialogue between space and soul, where every element is meticulously curated to reflect your unique narrative.</p>
+                    <p>Our approach combines classical principles with contemporary innovation, creating interiors that stand the test of time while embracing the present moment. We craft environments that don't just look beautiful—they feel profoundly right.</p>
+                </div>
+                <div class="philosophy-stats">
+                    <div class="stat-item">
+                        <h3 class="stat-number">150+</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">12</h3>
+                        <p class="stat-label">Years of Excellence</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">98%</h3>
+                        <p class="stat-label">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">What We Offer</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="10" width="40" height="40" stroke="currentColor" stroke-width="2"/>
+                            <rect x="20" y="20" width="20" height="20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Residential Design</h3>
+                    <p class="service-description">Transform your home into a sanctuary that reflects your personality and elevates your daily life.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2"/>
+                            <line x1="30" y1="10" x2="30" y2="50" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Commercial Spaces</h3>
+                    <p class="service-description">Create inspiring work environments that enhance productivity and embody your brand values.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="30,10 50,25 50,50 10,50 10,25" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <rect x="25" y="35" width="10" height="15" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Custom Furniture</h3>
+                    <p class="service-description">Bespoke pieces designed and crafted specifically for your space, ensuring perfect harmony.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 15 L45 15 L45 45 L15 45 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M15 30 L45 30" stroke="currentColor" stroke-width="2"/>
+                            <path d="M30 15 L30 45" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Space Planning</h3>
+                    <p class="service-description">Optimize your layout for flow, functionality, and maximum aesthetic impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Preview -->
+    <section class="featured-work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="work-preview-grid">
+                <div class="work-preview-item large">
+                    <div class="work-image" style="background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);"></div>
+                    <div class="work-info">
+                        <h3>Minimalist Penthouse</h3>
+                        <span class="work-category">Residential</span>
+                    </div>
+                </div>
+                <div class="work-preview-item">
+                    <div class="work-image" style="background: linear-gradient(135deg, #4a4a4a 0%, #2c2c2c 100%);"></div>
+                    <div class="work-info">
+                        <h3>Executive Office</h3>
+                        <span class="work-category">Commercial</span>
+                    </div>
+                </div>
+                <div class="work-preview-item">
+                    <div class="work-image" style="background: linear-gradient(135deg, #3a3a3a 0%, #252525 100%);"></div>
+                    <div class="work-info">
+                        <h3>Coastal Retreat</h3>
+                        <span class="work-category">Residential</span>
+                    </div>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="items.html" class="secondary-button">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Space?</h2>
+                <p class="cta-text">Let's create something extraordinary together.</p>
+                <a href="contact.html" class="cta-button">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">ATELIER NOIR</h3>
+                    <p class="footer-tagline">Timeless Design. Modern Living.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="items.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>123 Design Avenue</li>
+                        <li>New York, NY 10001</li>
+                        <li>hello@ateliernoir.com</li>
+                        <li>+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atelier Noir. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
