@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ATELIER NOIR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">ATELIER NOIR</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="items.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">
+                    <span>Cart</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Portfolio</h1>
+            <p class="page-subtitle">A curated selection of our finest work</p>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="furniture">Furniture</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(1)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Minimalist Penthouse</h3>
+                        <p class="portfolio-category">Residential</p>
+                        <p class="portfolio-price">Design Package: $15,000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(1)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4a4a4a 0%, #2c2c2c 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(2)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Executive Office Suite</h3>
+                        <p class="portfolio-category">Commercial</p>
+                        <p class="portfolio-price">Design Package: $25,000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(2)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #3a3a3a 0%, #252525 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(3)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Coastal Retreat</h3>
+                        <p class="portfolio-category">Residential</p>
+                        <p class="portfolio-price">Design Package: $18,500</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item" data-category="furniture">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #3d3d3d 0%, #1f1f1f 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(4)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Custom Walnut Credenza</h3>
+                        <p class="portfolio-category">Furniture</p>
+                        <p class="portfolio-price">$8,500</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(4)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #454545 0%, #2a2a2a 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(5)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Boutique Hotel Lobby</h3>
+                        <p class="portfolio-category">Commercial</p>
+                        <p class="portfolio-price">Design Package: $45,000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(5)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #353535 0%, #202020 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(6)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Modern Loft Conversion</h3>
+                        <p class="portfolio-category">Residential</p>
+                        <p class="portfolio-price">Design Package: $22,000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(6)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 7 -->
+                <div class="portfolio-item" data-category="furniture">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #424242 0%, #282828 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(7)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Sculptural Dining Table</h3>
+                        <p class="portfolio-category">Furniture</p>
+                        <p class="portfolio-price">$12,000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(7)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 8 -->
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #383838 0%, #232323 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(8)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Luxury Master Suite</h3>
+                        <p class="portfolio-category">Residential</p>
+                        <p class="portfolio-price">Design Package: $16,500</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(8)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 9 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #474747 0%, #2d2d2d 100%);">
+                        <div class="portfolio-overlay">
+                            <button class="view-details-btn" onclick="openModal(9)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Creative Agency Office</h3>
+                        <p class="portfolio-category">Commercial</p>
+                        <p class="portfolio-price">Design Package: $32,000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(9)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image" id="modalImage"></div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-category" id="modalCategory"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <strong>Area:</strong> <span id="modalArea"></span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Duration:</strong> <span id="modalDuration"></span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Year:</strong> <span id="modalYear"></span>
+                        </div>
+                    </div>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <button class="add-to-cart-btn" id="modalAddToCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">ATELIER NOIR</h3>
+                    <p class="footer-tagline">Timeless Design. Modern Living.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="items.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>123 Design Avenue</li>
+                        <li>New York, NY 10001</li>
+                        <li>hello@ateliernoir.com</li>
+                        <li>+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atelier Noir. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
